@@ -1,26 +1,43 @@
-# Resilience engineering notes
+# Resilience engineering papers
+
+## Overview
 
 Alias: <http://resiliencepapers.club> (thanks to [John Allspaw](https://twitter.com/allspaw)).
 
-If you're not sure what to read first, check out [Resilience engineering: Where do I start?](intro.md)
-
-This file contains notes about people active in resilience engineering, as well as some influential
+This doc contains notes about people active in resilience engineering, as well as some influential
 researchers who are no longer with us, organized alphabetically. It also includes people and papers
 from related fields, such as cognitive systems engineering and naturalistic decision-making.
 
+Some papers have a ([TWRR](http://resilienceroundup.com)) link next to them. This
+stands for Thai Wood's [Resilience Roundup](http://resilienceroundup.com). Thai publishes a newsletter that
+summarizes resilience engineering papers.
+
+## Other interesting links
+
+If you're not sure what to read first, check out:
+
+* [learningfromincidents.io](http://learningfromincidents.io) is the Learning From Incidents in Software community site.
+* [Resilience engineering: Where do I start?](intro.md) for which foundational papers to start with
+
+For a collection of talks, check out the [Resilience Engineering, Cognitive Systems
+Engineering, and Human Factors Concepts in Software
+Contexts](https://www.youtube.com/playlist?list=PLb1aZTnPf3-OMChMkrr6WsokRI6LOnuem)
+YouTube playlist maintained by John Allspaw.
 
 You might also be interested in my [notes on David Woods's Resilience Engineering short course](https://github.com/lorin/res-eng-short-course-notes).
 
-Note: there are now [multiple contributors](https://github.com/lorin/resilience-engineering/graphs/contributors) to this repository.
+The papers linked here are also in the [zotero res-eng group](https://www.zotero.org/groups/2335189/res-eng/items).
+
+## People
 
 For each person, I list concepts that they reference in their writings, along
 with some publications. The publications lists aren't comprehensive:
 they're ones I've read or have added to my to-read list. 
 
-
 * [John Allspaw](#john-allspaw)
 * [Lisanne Bainbridge](#lisanne-bainbridge)
 * [Andrea Baker](#andrea-baker)
+* [E. Asher Balkin](#e-asher-balkin)
 * [Johan Bergström](#johan-bergström)
 * [Todd Conklin](#todd-conklin)
 * [Richard I. Cook](#richard-i-cook)
@@ -31,7 +48,9 @@ they're ones I've read or have added to my to-read list.
 * [Paul Feltovich](#paul-feltovich)
 * [Pedro Ferreira](http://www.resilience-engineering-association.org/user/pedro/)
 * [Meir Finkel](#meir-finkel)
+* [Marisa Grayson](#marisa-grayson)
 * [Ivonne Andrade Herrera](#ivonne-andrade-herrera)
+* [Robert Hoffman](#robert-hoffman)
 * [Erik Hollnagel](#erik-hollnagel)
 * [Leila Johannesen](#leila-johannesen)
 * [Gary Klein](#gary-klein)
@@ -39,6 +58,7 @@ they're ones I've read or have added to my to-read list.
 * [Nancy Leveson](#nancy-leveson)
 * [Carl Macrae](#carl-macrae)
 * [Laura Maguire](#laura-maguire)
+* [Christopher Nemeth](#christopher-nemeth)
 * [Anne-Sophie Nyssen](anne-sophie-nyssen)
 * [Elinor Ostrom](#elinor-ostrom)
 * [Jean Pariès](#jean-paries)
@@ -47,6 +67,7 @@ they're ones I've read or have added to my to-read list.
 * [Shawna J. Perry](#shawna-j-perry)
 * [Jens Rasmussen](#jens-rasmussen)
 * [James Reason](#james-reason)
+* [J. Paul Reed](#j-paul-reed)
 * [Emilie M. Roth](#emilie-m-roth)
 * [Nadine Sarter](#nadine-sarter)
 * [James C. Scott](#james-c-scott)
@@ -57,7 +78,7 @@ they're ones I've read or have added to my to-read list.
 * [David Woods](#david-woods)
 * [John Wreathall](#john-wreathall)
 
-Some big ideas:
+## Some big ideas
 
 * [The adaptive universe](#the-adaptive-universe) (David Woods)
 * [Dynamic safety model](#dynamic-safety-model) (Jens Rasmussen)
@@ -68,6 +89,8 @@ Some big ideas:
 * Robust yet fragile (John C. Doyle)
 * [STAMP: Systems-Theoretic Accident Model & Process](#stamp) (Nancy Leveson)
 * Polycentric governance (Elinor Ostrom)
+
+Note: there are now [multiple contributors](https://github.com/lorin/resilience-engineering/graphs/contributors) to this repository.
 
 ## John Allspaw
 
@@ -88,10 +111,13 @@ Allspaw tweets as [@allspaw](https://twitter.com/allspaw).
 
 ### Selected talks
 
+* [Resilience Engineering: The What and How](https://devopsdays.org/events/2019-washington-dc/program/john-allspaw/)
 * [Incidents as we Imagine Them Versus How They Actually Are](https://community.pagerduty.com/t/incidents-as-we-imagine-them-versus-how-they-actually-are-with-john-allspaw/2708) 
+* [How your systems keep running day after day](https://www.youtube.com/watch?v=xA5U85LSk0M)
 * [Problem detection (papers we love)](https://www.youtube.com/watch?v=NxctiGRI2y8)
   (presentation of [Problem detection] paper)
 * [Common Ground and Coordination in Joint Activity (papers we love)](https://paperswelove.org/2016/video/john-allspaw-common-ground/) (presentation of [Common Ground and Coordination in Joint Activity] paper)
+* [Amplifying sources of resilience](https://www.infoq.com/presentations/resilience-thinking-paradigm/) (presentation about applying Resilience Engineering thinking & paradigms to the world of software engineering)
 
 
 ## Lisanne Bainbridge
@@ -118,10 +144,10 @@ be frequently cited.
 * interface design 
 
 ## Selected publications
-* [Ironies of automation]
+* [Ironies of automation] ([TWRR](https://resilienceroundup.com/issues/35/))
 
 
-[Ironies of automation]: https://doi.org/10.1016/0005-1098(83)90046-8
+[Ironies of automation]: https://www.ise.ncsu.edu/wp-content/uploads/2017/02/Bainbridge_1983_Automatica.pdf
 
 ## Andrea Baker
 
@@ -142,6 +168,15 @@ Baker tweets as [@thehopmentor](https://twitter.com/thehopmentor).
 * [A bit about HOP](https://docs.wixstatic.com/ugd/1a0149_21bcf20f158540098d3d7987ffbf3f58.pdf) (editorial)
 * [A short introduction to human and organizational performance (hop) and learning teams](http://www.safetydifferently.com/a-short-introduction-to-human-and-organizational-performance-hop-and-learning-teams/) (blog post)
 
+## E. Asher Balkin
+
+### Selected publications
+
+* [Resiliency Trade Space Study: The Interaction of Degraded C2 Link and Detect and Avoid Autonomy on Unmanned Aircraft](https://www.researchgate.net/publication/330222613_Resiliency_Trade_Space_Study_The_Interaction_of_Degraded_C2_Link_and_Detect_and_Avoid_Autonomy_on_Unmanned_Aircraft)
+
+### Selected talks
+
+* [Root cause and the wrong path](https://www.youtube.com/watch?v=kK6t-gttsJw)
 
 ## Johan Bergström
 
@@ -163,6 +198,9 @@ Bergström tweets as [@bergstrom_johan](https://twitter.com/bergstrom_johan).
 
 * [Resilience engineering: Current status of the research and future challenges](https://www.sciencedirect.com/science/article/pii/S0925753516306130)
 * [Rule- and role retreat: An empirical study of procedures and resilience](https://www.researchgate.net/publication/50917226_Rule-_and_role_retreat_An_empirical_study_of_procedures_and_resilience)
+* [Team Coordination in Escalating Situations: An Empirical Study Using Mid-Fidelity Simulation]
+
+[Team Coordination in Escalating Situations: An Empirical Study Using Mid-Fidelity Simulation]: https://portal.research.lu.se/ws/files/1376441/3014838.pdf
 
 ### Selected talks
 
@@ -182,10 +220,14 @@ Conklin tweets as [@preaccident](https://twitter.com/preaccident).
 * [Pre-accident investigations: an introduction to organizational safety](https://www.amazon.com/Pre-Accident-Investigations-Todd-Conklin/dp/1409447820)
 * [Pre-accident investigations: better questions - an applied approach to
   operational learning](https://www.amazon.com/gp/product/1472486137)
+  
+### Selected talks
+
+Quanta - [Risk and Safety Conf 2019](https://www.youtube.com/watch?v=5WTbeFj2kJY&feature=youtu.be)
 
 ## Richard I. Cook
 
-Cook is a medical doctor who studies failures in complex systems.  He is one of the founders [Adaptive Capacity Labs](http://www.adaptivecapacitylabs.com/), a resilience engineering consultancy.
+Cook is an anasthesiologist who studies failures in complex systems.  He is one of the founders [Adaptive Capacity Labs](http://www.adaptivecapacitylabs.com/), a resilience engineering consultancy.
 
 Cook tweets as [@ri_cook](https://twitter.com/ri_cook).
 
@@ -196,6 +238,7 @@ Cook tweets as [@ri_cook](https://twitter.com/ri_cook).
 * Going solid
 * Cycle of error
 * "new look"
+* first vs second stories
 
 
 ### Selected publications
@@ -203,7 +246,7 @@ Cook tweets as [@ri_cook](https://twitter.com/ri_cook).
 * [How complex systems fail](http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf)
 * [*Where* complex systems fail](https://www.snafucatchers.com/single-post/2017/11/14/void-Incidents-as-Untyped-Pointers)
 * [Distancing through differencing: An obstacle to organizational learning following accidents](https://www.researchgate.net/publication/292504703_Distancing_through_differencing_An_obstacle_to_organizational_learning_following_accidents)
-* [Being bumpable](http://csel.eng.ohio-state.edu/productions/woodscta/media/beingbump.pdf)
+* [Being bumpable](http://csel.eng.ohio-state.edu/productions/woodscta/media/beingbump.pdf) ([TWRR](https://www.getrevue.co/profile/resilience/issues/resilience-roundup-being-bumpable-issue-33-177340))
 * [Behind Human Error]
 * [Incidents - markers of resilience or brittleness?](https://www.researchgate.net/publication/292504952_Incidents_-_markers_of_resilience_or_brittleness)
 * [“Going solid”: a model of system dynamics and consequences for patient safety](https://qualitysafety.bmj.com/content/14/2/130)
@@ -219,11 +262,20 @@ Cook tweets as [@ri_cook](https://twitter.com/ri_cook).
 * [Grounding explanations in evolving, diagnostic situations]
 * [A Tale of Two Stories: Contrasting Views of Patient Safety]
 * ["Those found responsible have been sacked": some observations on the usefulness of error](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.623.5749&rep=rep1&type=pdf)
-* [Sensemaking, Safety, and Cooperative Work in the Intensive Care Unit](https://www.researchgate.net/publication/220579381_Sensemaking_Safety_and_Cooperative_Work_in_the_Intensive_Care_Unit)
 * [Perspectives on Human Error: Hindsight Biases and Local Rationality]
 * [Mistaking Error]
 * [Adapting to new technology in the operating room]
 * [Verite, Abstraction, and Ordinateur Systems in the Evolution of Complex Process Control](https://www.researchgate.net/publication/3657912_Verite_abstraction_and_ordinateur_systems_in_the_evolution_of_complex_process_control)
+* [Collaborative Cross-Checking to Enhance Resilience]
+* [Resilience Engineering: New directions for measuring and maintaining safety in complex systems]
+* [The Role of Automation in Complex System Failures]
+* [Thinking about accidents and systems](https://www.researchgate.net/publication/228352596_Thinking_about_accidents_and_systems)
+* [The Stockholm blizzard of 2012](https://www.taylorfrancis.com/books/e/9781315605739/chapters/10.1201/9781315605739-11)
+* [New Arctic Air Crash Aftermath Role-Play Simulation Orchestrating a Fundamental Surprise]
+* [Dissenting Statement: Health IT Is a Class III Medical Device](https://www.nap.edu/read/13269/chapter/14)
+* [Nine Steps to Move Forward From Error]
+* [Gaps in the continuity of care and progress on patient safety]
+* [Above the Line, Below the Line](https://queue.acm.org/detail.cfm?id=3380777) ([TWRR](https://resilienceroundup.com/issues/68/))
 
 [Behind Human Error]: https://www.amazon.com/Behind-Human-Error-David-Woods/dp/0754678342
 [Cognitive consequences of clumsy automation on high workload, high consequence human performance]: https://ntrs.nasa.gov/search.jsp?R=19910011398
@@ -235,12 +287,22 @@ Cook tweets as [@ri_cook](https://twitter.com/ri_cook).
 [A Tale of Two Stories: Contrasting Views of Patient Safety]: https://www.researchgate.net/publication/245102691_A_Tale_of_Two_Stories_Contrasting_Views_of_Patient_Safety
 [Perspectives on Human Error: Hindsight Biases and Local Rationality]: https://www.nifc.gov/PUBLICATIONS/acc_invest_march2010/speakers/Perspectives%20on%20Human%20Error.pdf
 [Mistaking Error]: https://www.researchgate.net/publication/328149714_Mistaking_Error
-
 [Adapting to new technology in the operating room]: https://www.researchgate.net/publication/14230576_Adapting_to_New_Technology_in_the_Operating_Room
+[Collaborative Cross-Checking to Enhance Resilience]: https://www.researchgate.net/publication/220579448_Collaborative_Cross-Checking_to_Enhance_Resilience
+[Resilience Engineering: New directions for measuring and maintaining safety in complex systems]: https://pdfs.semanticscholar.org/a0d3/9cc66adc64e297048a32b71aeee209a451af.pdf
+[The Role of Automation in Complex System Failures]: https://www.researchgate.net/publication/232191704_The_Role_of_Automation_in_Complex_System_Failures
+[New Arctic Air Crash Aftermath Role-Play Simulation Orchestrating a Fundamental Surprise]: https://www.researchgate.net/publication/2484621_New_Arctic_Air_Crash_Aftermath_Role-Play_Simulation_Orchestrating_a_Fundamental_Surprise
+[Nine Steps to Move Forward From Error]: http://csel.eng.ohio-state.edu/productions/pexis/readings/submod4/nine%20steps%20CTW2002.pdf
+[Gaps in the continuity of care and progress on patient safety]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1117777/
 
 ### Selected talks
 
-* [How Complex Systems Fail](https://www.youtube.com/watch?v=2S0k12uZR14)
+* [How Complex Systems Fail](https://www.youtube.com/watch?v=2S0k12uZR14) (Velocity 2012)
+* [Lectures on the study of cognitive work](https://vimeo.com/showcase/6184024) (Graduate student lecture-discussions at The Royal Institute of Technology, Huddinge, SWEDEN in 2012 )
+* [Panel discussion: Safety Culture, Lean, and DevOps] (DOES 2017)
+* [Working at the center of the Cyclone](https://www.youtube.com/watch?v=3ZP98stDUf0&feature=youtu.be) (DOES 2018)
+
+[Panel discussion: Safety Culture, Lean, and DevOps]: https://www.youtube.com/watch?v=gtxtb9z_4FY&feature=youtu.be
 
 
 
@@ -296,7 +358,7 @@ Dekker examines how cultural norms defining justice can be re-oriented to minimi
 ### Selected publications
 
 * [Drift into failure](https://www.amazon.com/Drift-into-Failure-Sidney-Dekker/dp/1409422216)
-* [Reconstructing human contributions to accidents: the new view on error and performance](https://www.sciencedirect.com/science/article/pii/S0022437502000324)
+* [Reconstructing human contributions to accidents: the new view on error and performance](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.411.4985&rep=rep1&type=pdf)
 * [The field guide to 'human error' investigations](https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/1472439058s://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/1472439058)
 * [Behind Human Error](https://www.amazon.com/gp/product/B075QFGTNP/ref=x_gr_w_glide_bb?ie=UTF8&tag=x_gr_w_glide_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B075QFGTNP&SubscriptionId=1MGPYB6YW3HWK55XCGG2)
 * [Rule- and role retreat: An empirical study of procedures and resilience](https://www.researchgate.net/publication/50917226_Rule-_and_role_retreat_An_empirical_study_of_procedures_and_resilience?enrichId=rgreq-23625e555a0d8e5250c74f24b5fd01ca-XXX&enrichSource=Y292ZXJQYWdlOzUwOTE3MjI2O0FTOjk3MzU5NjY5MjM1NzQ1QDE0MDAyMjM3NjI5NDY%3D&el=1_x_2&_esc=publicationCoverPdf)
@@ -305,6 +367,24 @@ Dekker examines how cultural norms defining justice can be re-oriented to minimi
 * [Six stages to the new view of human error](http://www.humanfactors.lth.se/fileadmin/lusa/Sidney_Dekker/articles/2007/SafetyScienceMonitor.pdf)
 * [Behind Human Error]
 * [Employees: A Problem to Control or Solution to Harness?](http://sidneydekker.com/wp-content/uploads/2014/08/DekkerPS2014.pdf)
+* [Team Coordination in Escalating Situations: An Empirical Study Using Mid-Fidelity Simulation]
+* [Resilience Engineering: New directions for measuring and maintaining safety in complex systems]
+* [Illusions of explanation: A critical essay on error classification](http://www.humanfactors.lth.se/fileadmin/lusa/Sidney_Dekker/articles/2003_and_before/Illusions_of_explanation.pdf)
+* [Failure to adapt or adaptations that fail: contrasting models on procedures and safety](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.606.3361&rep=rep1&type=pdf)
+* [Human factors and folk models]
+* [The High Reliability Organization Perspective] ([TWRR](https://resilienceroundup.com/issues/09/))
+* [Illusions of explanation: A critical essay on error classification](http://www.humanfactors.lth.se/fileadmin/lusa/Sidney_Dekker/articles/2003_and_before/Illusions_of_explanation.pdf) ([TWRR](https://resilienceroundup.com/issues/42/))
+* [Safety II professionals: How resilience engineering can transform safety practice] ([TWRR](https://resilienceroundup.com/issues/64/))
+
+
+[Human factors and folk models]: https://link.springer.com/article/10.1007%2Fs10111-003-0136-9
+[The High Reliability Organization Perspective]: http://sidneydekker.com/wp-content/uploads/2013/01/CH005.pdf
+[Safety II professionals: How resilience engineering can transform safety practice]: https://doi.org/10.1016/j.ress.2019.106740
+
+### Selected talks
+
+* [Panel discussion: Safety Culture, Lean, and DevOps]
+
 
 ## John C. Doyle
 
@@ -370,8 +450,13 @@ who has done extensive reserach in human expertise.
 
 * [Common Ground and Coordination in Joint Activity]
 * [Issue of expert flexibility in contexts characterized by complexity and change](https://www.researchgate.net/publication/232465540_Issue_of_expert_flexibility_in_contexts_characterized_by_complexity_and_change)
+* [A rose by any other name...would probably be given an acronym]
+* [Learners' (mis)understanding of important and difficult concepts: a challenge to smart machines in education](https://www.researchgate.net/publication/234818797_Learners'_misunderstanding_of_important_and_difficult_concepts_a_challenge_to_smart_machines_in_education)
+* [Ten challenges for making automation a team player] ([TWRR](https://resilienceroundup.com/issues/66))
 
 [Common Ground and Coordination in Joint Activity]: http://jeffreymbradshaw.net/publications/Common_Ground_Single.pdf
+[A rose by any other name...would probably be given an acronym]: https://www.researchgate.net/publication/3454029_A_rose_by_any_other_namewould_probably_be_given_an_acronym
+[Ten challenges for making automation a team player]: https://ieeexplore.ieee.org/abstract/document/1363742
 
 ## Meir Finkel
 
@@ -380,6 +465,14 @@ Finkel is a Colonel in the Israeli Defense Force (IDF) and the Director of the I
 ### Selected publications
 * [On Flexibility: Recovery from Technological and Doctrinal Surprise on the Battlefield](https://www.amazon.com/Flexibility-Recovery-Technological-Doctrinal-Battlefield/dp/0804774897/ref=sr_1_3?ie=UTF8&qid=1546046916&sr=8-3&keywords=on+flexibility)
 
+## Marisa Grayson
+
+[Grayson](https://www.linkedin.com/in/marisa-grayson/) is a cognitive systems engineer at Mile Two, LLC.
+
+### Selected Publications
+
+* [Approaching Overload: Diagnosis and Response to Anomalies in Complex and Automated Production Software Systems](https://www.researchgate.net/publication/333091997_Approaching_Overload_Diagnosis_and_Response_to_Anomalies_in_Complex_and_Automated_Production_Software_Systems)
+
 ## Ivonne Andrade Herrera
 
 [Herrera](https://www.ntnu.edu/employees/ivonne.a.herrera) is an associate professor in 
@@ -387,9 +480,48 @@ the department of industrial economics and technology management at NTNU and a
 senior research scientist at SINTEF. Her areas of expertise include safety management and
 resilience engineering in avionics and air traffic management.
 
+### Selected publications
 
-[List of publications](https://wo.cristin.no/as/WebObjects/cristin.woa/wa/fres?sort=ar&pnr=30556&action=sok)
+* [Organisational accidents and resilient organisations: six perspectives](https://www.sintef.no/globalassets/upload/teknologi_og_samfunn/sikkerhet-og-palitelighet/rapporter/sintef-a17034-organisational-accidents-and-resilience-organisations-six-perspectives.-revision-2.pdf) (SINTEF A17034 report)
 
+See also: [list of publications](https://wo.cristin.no/as/WebObjects/cristin.woa/wa/fres?sort=ar&pnr=30556&action=sok)
+
+
+## Robert Hoffman
+
+[Hoffman](https://www.ihmc.us/groups/rhoffman/) is a senior research scientist at Florida Institute for Human & Machine Cognition (IHMC),
+who has done extensive reserach in human expertise.
+
+### Selected publications
+
+* [Measuring resilience](https://journals.sagepub.com/doi/abs/10.1177/0018720816686248)
+* [Myths of automation and their implications for military procurement]
+* [The Seven Deadly Myths of "Autonomous Systems"]
+* [A rose by any other name...would probably be given an acronym]
+* [Seeing the invisible: perceptual-cognitive aspects of expertise](https://cmapspublic3.ihmc.us/rid=1G9NSY15K-N7MJMZ-LC5/SeeingTheInvisible.pdf)
+* [Toward a Theory of Complex and Cognitive Systems]
+* [Macrocognition] ([TWRR](https://resilienceroundup.com/issues/62/))
+
+[Myths of automation and their implications for military procurement]:https://www.researchgate.net/publication/326000581_Myths_of_automation_and_their_implications_for_military_procurement 
+
+[The Seven Deadly Myths of "Autonomous Systems"]: https://www.researchgate.net/publication/260304859_The_Seven_Deadly_Myths_of_Autonomous_Systems
+
+[Toward a Theory of Complex and Cognitive Systems]: https://www.researchgate.net/publication/3454245_Toward_a_Theory_of_Complex_and_Cognitive_Systems
+
+[Macrocognition]: https://pdfs.semanticscholar.org/df74/b2909f54b41a485cd4c0189fc4aa19d176d0.pdf
+
+
+### Concepts
+
+#### Seven deadly myths of autonomous systems:
+
+1. "Autonomy" is unidimensional.
+2. The conceptualization of "levels of autonomy" is a useful scientific grounding for the development of autonomous system roadmaps.
+3. Autonomy is a widget.
+4. Autonomous systems are autonomous.
+5. Once achieved, full autonomy obviates the need for human-machine collaboration.
+6. As machines acquire more autonomy, they will work as simple sibstitutes (or multipliers) of human capability
+7. "Full autonomy"  is not only possible, but is always desireable.
 
 ## Erik Hollnagel
 
@@ -429,6 +561,13 @@ Safety-II: performance variability rather than bimodality
 Hollnagel proposed the Functional Resonance Analysis Method (FRAM) for modeling
 complex socio-technical systems.
 
+
+#### Four abilities necessary for resilient performance
+* respond
+* monitor
+* learn
+* anticipate
+
 ### Concepts
 * ETTO (efficiency thoroughness tradeoff) principle
 * FRAM (functional resonance analysis method)
@@ -440,6 +579,7 @@ complex socio-technical systems.
 * emergence
 * work-as-imagined vs. work-as-done
 * joint cognitive systems
+* systems of the first, second, third, fourth kind
 
 ### Selected publications
 
@@ -453,13 +593,23 @@ complex socio-technical systems.
 * [I want to believe: some myths about the management of industrial safety](http://dx.doi.org/10.1007/s10111-012-0237-4)
 * [Resilience engineering – Building a Culture of Resilience](http://www.ptil.no/getfile.php/1325150/PDF/Seminar%202013/Integrerte%20operasjoner/Hollnagel_RIO_presentation.pdf) (slides)
 * [Anomaly Response]
-* [Cognitive Systems Engineering: New wine in new bottles] (see also [Thai Wood's notes](https://www.getrevue.co/profile/resilience/issues/resilience-roundup-cognitive-systems-engineering-new-wine-in-new-bottles-issue-32-175912) in his [Resilience Roundup] newsletter)
+* [Cognitive Systems Engineering: New wine in new bottles] ([TWRR](https://www.getrevue.co/profile/resilience/issues/resilience-roundup-cognitive-systems-engineering-new-wine-in-new-bottles-issue-32-175912))
+* [Epilogue: Resilience Engineering Precepts](https://www.researchgate.net/publication/265074845_Epilogue_Resilience_Engineering_Precepts)
+* [Resilience Engineering: New directions for measuring and maintaining safety in complex systems]
+* [Resilience Engineering](https://erikhollnagel.com/ideas/resilience-engineering.html) (web essay)
+* [RAG - Resilience Analysis Grid](http://erikhollnagel.com/onewebmedia/RAG%20Outline%20V2.pdf)
+* [Resilience engineering in practice: a guidebook]
+* [Mapping Cognitive Demands in Complex Problem-Solving Worlds] (mentions disturbance management)
+* [Human factors and folk models]
+* [Designing for joint cognitive systems](https://www.researchgate.net/publication/4213914_Designing_for_joint_cognitive_systems)
+* [Macrocognition] ([TWRR](https://resilienceroundup.com/issues/62/))
 
 
 [Resilience Engineering: Concepts and Precepts]: https://www.amazon.com/gp/product/B009KNDF64/ref=x_gr_w_glide_bb?ie=UTF8&tag=x_gr_w_glide_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B009KNDF64&SubscriptionId=1MGPYB6YW3HWK55XCGG2
 [Anomaly Response]: https://docs.wixstatic.com/ugd/3ad081_f46dda684154447583c8a5b282b60cc2.pdf
 [Cognitive Systems Engineering: New wine in new bottles]: https://www.ida.liu.se/~729A15/mtrl/CSEnew.pdf?utm_campaign=Resilience%20Roundup&utm_medium=email&utm_source=Revue%20newsletter
 [Resilience Roundup]: https://resilienceroundup.com/
+[Mapping Cognitive Demands in Complex Problem-Solving Worlds]: https://www.researchgate.net/publication/220108174_Mapping_Cognitive_Demands_in_Complex_Problem-Solving_Worlds<Paste>
 
 ## Leila Johannesen
 
@@ -498,17 +648,21 @@ Klein tweets as [@KleInsight](https://twitter.com/KleInsight).
 * [Common Ground and Coordination in Joint Activity]
 * [Working minds: a practitioner's guide to cognitive task analysis](https://www.amazon.com/gp/product/0262532816/ref=dbs_a_def_rwt_bibl_vppi_i5)
 * [Patterns in Cooperative Cognition](https://www.researchgate.net/publication/262449980_Patterns_in_Cooperative_Cognition)
-* [Can We Trust Best Practices? Six Cognitive Challenges of Evidence-Based Approaches](https://journals.sagepub.com/doi/abs/10.1177/1555343416637520?journalCode=edma)
+* [Can We Trust Best Practices? Six Cognitive Challenges of Evidence-Based Approaches]
 * [Conditions for intuitive expertise: a failure to disagree](http://dx.doi.org/10.1037/a0016755)
 * [Problem detection]
-* [Ten challenges for making automation a team player]
+* [Ten challenges for making automation a team player] ([TWRR](https://resilienceroundup.com/issues/66))
 * [Decision making in action: models and methods](http://www.macrocognition.com/documents/Decision-Making-in-Action-Models-and-Methods-0316.pdf)
 * [Critical decision method for eliciting knowledge](https://ieeexplore.ieee.org/document/31053)
 * [A recognition-primed decision (RPD) model of rapid decision making](https://pdfs.semanticscholar.org/0672/092ecc507fb41d81e82d2986cf86c4bff14f.pdf)
 * [Seeing the invisible: perceptual-cognitive aspects of expertise](https://cmapspublic3.ihmc.us/rid=1G9NSY15K-N7MJMZ-LC5/SeeingTheInvisible.pdf)
+* [Patterns in Cooperative Cognition]
+* [The strengths and limitations of teams for detecting problems](https://link.springer.com/article/10.1007/s10111-005-0024-6)
+* [Macrocognition] ([TWRR](https://resilienceroundup.com/issues/62/))
 
 [Problem detection]: https://www.researchgate.net/publication/220579480_Problem_detection
-[Ten challenges for making automation a team player]: https://ieeexplore.ieee.org/abstract/document/1363742
+[Patterns in Cooperative Cognition]: https://www.researchgate.net/publication/262449980_Patterns_in_Cooperative_Cognition
+[Can We Trust Best Practices? Six Cognitive Challenges of Evidence-Based Approaches]: https://journals.sagepub.com/doi/abs/10.1177/1555343416637520?journalCode=edma
 
 ## Nancy Leveson
 
@@ -574,6 +728,22 @@ Maguire has done safety work in multiple domains, including forestry, avalanches
 
 Maguire tweets as [@LauraMDMaguire](https://twitter.com/lauramdmaguire).
 
+### Selected talks
+
+* [Mental models – why saying “I didn’t know it worked that way” is a sign of expertise not incompetence](https://www.youtube.com/watch?v=VEprjLtHzg0)
+* [Operating at the edge of the envelope](https://re-deploy.io/videos/27-maguire.html)
+
+## Christopher Nemeth
+
+[Nemeth](https://www.linkedin.com/in/christopher-nemeth-6651204) is a principal scientist at Applied Resesarch Associates, Inc.
+
+### Selected publications
+
+* [Replacing Hindsight With Insight: Toward Better Understanding of Diagnostic Failures]
+
+
+[Replacing Hindsight With Insight: Toward Better Understanding of Diagnostic Failures]: https://www.semanticscholar.org/paper/Replacing-hindsight-with-insight%3A-toward-better-of-Wears-Nemeth/1bef45cae7375eddc8ee584dff100d200d812a8d
+
 ## Anne-Sophie Nyssen
 
 [Nyssen](http://www.lecit.ulg.ac.be/equipe/anne-sophie-nyssen/) is a psychology professor at the University of Liège,
@@ -602,8 +772,10 @@ political science researcher.
 Pariès is the president of [Dédale](http://www.dedale.net/dedale_en/), a safety and human factors consultancy.
 
 ### Selected publications
-* [Resilience engineering in practice: a guidebook](https://www.crcpress.com/Resilience-Engineering-in-Practice-A-Guidebook/Paries-Wreathall-Hollnagel/p/book/9781472420749)
+* [Resilience engineering in practice: a guidebook]
 
+
+[Resilience engineering in practice: a guidebook]: https://www.crcpress.com/Resilience-Engineering-in-Practice-A-Guidebook/Paries-Wreathall-Hollnagel/p/book/9781472420749
 ### Selected talks
 
 * [Predicting The fatal flaws: The challenge of The unpredictable...](paries-keynote-2015.pptx)
@@ -620,12 +792,22 @@ in healthcare.
 * [Using observational study as a tool for discovery: uncovering cognitive and collaborative demands and adaptive strategies]
 * [Voice Loops as Coordination Aids in Space Shuttle Mission Control]
 * [Functionally distributed coordination during anomaly response in space shuttle mission control]
+* [Patterns in Cooperative Cognition]
+* [Collaborative Cross-Checking to Enhance Resilience]
+* [How Unexpected Events Produce An Escalation Of Cognitive And Coordinative Demands]
+* [New Arctic Air Crash Aftermath Role-Play Simulation Orchestrating a Fundamental Surprise]
+* [Handoff strategies in settings with high consequences for failure: lessons for health care operations] ([TWRR](https://resilienceroundup.com/issues/56))
 
 [Using observational study as a tool for discovery: uncovering cognitive and collaborative demands and adaptive strategies]: https://www.researchgate.net/profile/Emily_Patterson2/publication/237138704_USING_OBSERVATIONAL_STUDY_AS_A_TOOL_FOR_DISCOVERY_UNCOVERING_COGNITIVE_AND_COLLABORATIVE_DEMANDS_AND_ADAPTIVE_STRATEGIES/links/0deec52c8e310b385a000000.pdf
 
 [Voice Loops as Coordination Aids in Space Shuttle Mission Control]: https://www.semanticscholar.org/paper/Voice-Loops-as-Coordination-Aids-in-Space-Shuttle-Patterson-Watts-Perotti/068dfee1a859a63fa2ef82f008d239e6a81ed004 
 
 [Functionally distributed coordination during anomaly response in space shuttle mission control]: https://www.researchgate.net/publication/3657906_Functionally_distributed_coordination_during_anomaly_response_inspace_shuttle_mission_control
+
+[How Unexpected Events Produce An Escalation Of Cognitive And Coordinative Demands]: http://csel.eng.ohio-state.edu/productions/laws/laws_mediapaper/2_4_escalation.pdf
+
+[Handoff strategies in settings with high consequences for failure: lessons for health care operations]: https://www.researchgate.net/publication/8648890_Handoff_strategies_in_settings_with_high_consequences_for_failure_Lessons_for_health_care_operations
+
 
 ## Charles Perrow
 
@@ -655,8 +837,11 @@ Perry is a medical researcher who studies emergency medicine.
 ### Selected publications
 
 * [Underground adaptations: case studies from health care](https://doi.org/10.1007/s10111-011-0207-2)
-* [Can We Trust Best Practices? Six Cognitive Challenges of Evidence-Based Approaches](https://journals.sagepub.com/doi/abs/10.1177/1555343416637520?journalCode=edma)
+* [Can We Trust Best Practices? Six Cognitive Challenges of Evidence-Based Approaches]
+* [The Role of Automation in Complex System Failures]
+* [Extemporaneous Adaptation to Evolving Complexity: A Case Study of Resilience in Healthcare] ([TWRR](https://resilienceroundup.com/issues/55))
 
+[Extemporaneous Adaptation to Evolving Complexity: A Case Study of Resilience in Healthcare]: https://pdfs.semanticscholar.org/1423/f18530599b9de186af0eee4852bb7e619384.pdf
 
 ## Jens Rasmussen
 
@@ -735,6 +920,7 @@ Source: [Risk management in a dynamic society: a modelling problem]
 * [“Going solid”: a model of system dynamics and consequences for patient safety](https://qualitysafety.bmj.com/content/14/2/130)
 * [Human error and the problem of causality in analysis of accidents](https://www.ida.liu.se/~729A71/Literature/Human%20Error_T/Rasmussen_1990.pdf)
 * [Ecological interfaces: A technological imperative in high‐tech systems](https://core.ac.uk/download/pdf/13788397.pdf)
+* [Information processing and human-machine interaction: an approach to cognitive engineering](https://www.amazon.com/Information-Processing-Human-Machine-Interaction-North-Holland/dp/0444009876)
 
 [Risk management in a dynamic society: a modelling problem]: https://doi.org/10.1016/S0925-7535(97)00052-0
 
@@ -770,6 +956,21 @@ Reason developed a model of the types of errors that humans make:
 
 [Human error]: https://www.amazon.com/gp/product/0521314194/ref=dbs_a_def_rwt_bibl_vppi_i0
 
+## J. Paul Reed
+
+[Reed](https://jpaulreed.com/) is a Senior Applied Resilience engineer at Netflix and runs [REdeploy](https://re-deploy.io), a conference focused on Resilience Engineering in the software development and operations industry.
+
+Reed tweets as [@jpaulreed](https://twitter.com/jpaulreed).
+
+### Selected Publications
+
+[Maps, Context, and Tribal Knowledge: On the Structure and Use of Post-Incident Analysis Artifacts in Software Development and Operations](https://lup.lub.lu.se/student-papers/search/publication/8966930)
+
+### Concepts
+
+* [Blame "Aware"](https://jpaulreed.com/blame-aware) (versus "Blameless") Culture
+* Postmortem Artifact _Archetypes_
+
 ## Emilie M. Roth
 
 [Roth](http://www.rothsite.com/resume.html) is a cognitive psychologist who
@@ -779,8 +980,9 @@ and applied cognitive psychology (cognitive engineering)
 
 ### Selected publications
 
-* [Uncovering the Requirements of Cognitive Work](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.564.2044) (see also [Thai Wood's notes](https://www.getrevue.co/profile/resilience/issues/resilience-roundup-uncovering-the-requirements-of-cognitive-work-issue-30-173410) in his [Resilience Roundup] newsletter)
-* [Using observational study as a tool for discovery: uncovering cognitive and collaborative demands and adaptive strategies]
+* [Uncovering the Requirements of Cognitive Work](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.564.2044) ([TWRR](https://www.getrevue.co/profile/resilience/issues/resilience-roundup-uncovering-the-requirements-of-cognitive-work-issue-30-173410)
+)* [Using observational study as a tool for discovery: uncovering cognitive and collaborative demands and adaptive strategies]
+* [Handoff strategies in settings with high consequences for failure: lessons for health care operations] ([TWRR](https://resilienceroundup.com/issues/56))
 
 ## Nadine Sarter
 
@@ -803,7 +1005,12 @@ She is the director of the Center for Ergonomics at the University of Michigan.
 * [Behind Human Error]
 * [Designed-Induced Error and Error-Informed Design: A Two-Way Street](https://www.amazon.com/Cognitive-Systems-Engineering-Expertise-Applications-ebook/dp/B076TDR6H9/ref=sr_1_1?keywords=cognitive+systems+engineering&qid=1554075974&s=gateway&sr=8-1)
 * [The Critical Incident Technique: A Method for Identifying System Strengths and Weaknesses Based on Observational Data](https://www.taylorfrancis.com/books/e/9780429134845)
+* [Myths of automation and their implications for military procurement]
+* [Bootstrapping multiple converging cognitive task analysis techniques for system design]
+* [Automation surprises]
 
+[Bootstrapping multiple converging cognitive task analysis techniques for system design]: https://www.researchgate.net/publication/313737506_Bootstrapping_multiple_converging_cognitive_task_analysis_techniques_for_system_design
+[Automation surprises]: https://www.researchgate.net/publication/270960170_Automation_surprises
 
 ## James C. Scott
 
@@ -836,11 +1043,17 @@ Shorrock tweets as [@StevenShorrock](https://twitter.com/StevenShorrock).
 
 ## Diane Vaughan
 
-Vaughan is a sociology researcher who did a famous study of the NASA Challenger accident.
+Vaughan is a sociology researcher who did a famous study of the NASA Challenger accident, concluding that it was the result of organizational failure rather than a technical failure.  Specifically, production pressure overrode the rigorous scientific safety culture in place at NASA.
 
 ### Concepts
 
-* normalization of deviance
+* Structural Secrecy:  Organizational structure, processes, and information exchange patterns can systematically undermine the ability to "see the whole picture" and conceal risky decisions.
+* Social Construction of Risk:  Out of the necessity to balance risk with the associated reward, any group of people will develop efficient heuristics to solve the problems they face.  The understanding of risk that faces one subgroup may not match that of another subgroup or of the whole group.  The ability of an individual to change a social construction of risk, formed over years with good intentions and often with evidence, is limited.  (Though the evidence is usually accurate, the conclusion might not be, leading to an inadvertent scientific paradigm.)
+* Normalization of Deviance:  During operation of a complex system, inadvertent deviations from system design may occur and not result in a system failure.  Because the intial construction of risk is usually conservative, the deviation is seen as showing that the system and its redundancies "worked", leading to a new accepted safe operating envelope.
+* Signals of potential danger:  Information gained through the operation of a system that may indicate the system does not work as designed.  Most risk constructions are based on a comprehensive understanding of the operation of the system, so information to the contrary is a sign that the system could leave the safe operation envelope in unexpected ways - a danger.
+* Weak signals, mixed signals, missed signals:  signals of potential danger that have been interpreted as non-threats or acceptable risk because at the time they didn't represent a clear and present danger sufficient to overcome the Social Construction of Risk.  Often, post-hoc, these are seen as causes due to cherry-picking - such signals were ignored before with no negative consequences.
+* Competition for Scarce Resources:  An ongoing need to justify investment to customers leads to Efficiency-Thoroughness Tradeoffs (ETTOs).  In NASA's case, justifying the cost of the Space Shuttle program to taxpayers and their congressional representatives meant pressure to quickly develop payload delivery capability at the lowest cost possible.
+* Belief in Redundancy:  Constructing risk from a signal of potential danger such that a redundant subsystem becomes part of the normal operating strategy for a primary subsystem.  In NASA's case, signals that the primary O-ring assembly did not operate as expected formed an acceptable risk because a secondary O-ring would contain a failure.  Redundancy was eliminated from the design in this construction of risk - the secondary system now became part of the primary system, eliminating system redundancy.
 
 ### Selected publications
 
@@ -857,9 +1070,10 @@ Vaughan is a sociology researcher who did a famous study of the NASA Challenger 
 
 ## Robert L. Wears
 
-Wears was a medical researcher who studied emergency medicine.
+Wears was a medical researcher who also had a PhD in industrial safety.
 
 ### Concepts
+
 * Underground adaptations
 * Articulated functions vs. important functions
 * Unintended effects
@@ -873,9 +1087,16 @@ Wears was a medical researcher who studied emergency medicine.
 * [The error of counting "errors"](https://linkinghub.elsevier.com/retrieve/pii/S0196064408006070)
 * [Underground adaptations: case studies from health care](https://doi.org/10.1007/s10111-011-0207-2)
 * [Fundamental On Situational Surprise: A Case Study With Implications For Resilience](https://books.openedition.org/pressesmines/1122)
-* [Replacing Hindsight With Insight: Toward Better Understanding of Diagnostic Failures](https://www.semanticscholar.org/paper/Replacing-hindsight-with-insight%3A-toward-better-of-Wears-Nemeth/1bef45cae7375eddc8ee584dff100d200d812a8d)
+* [Replacing Hindsight With Insight: Toward Better Understanding of Diagnostic Failures]
 * [Seeing patient safety ‘Like a State’](http://dx.doi.org/10.1016%2Fj.ssci.2014.02.007)
 * [Fundamental On Situational Surprise: A Case Study With Implications For Resilience](https://books.openedition.org/pressesmines/1122?lang=en)
+* [The Role of Automation in Complex System Failures]
+* [Exploring the Dynamics of Resilient Performance](https://pastel.archives-ouvertes.fr/pastel-00664145/document)
+* [Extemporaneous Adaptation to Evolving Complexity: A Case Study of Resilience in Healthcare] ([TWRR](https://resilienceroundup.com/issues/55))
+
+### Selected talks
+
+* [Design of resilient systems](https://www.youtube.com/watch?v=nV52yh6GDMg)
 
 
 ## David Woods
@@ -953,6 +1174,12 @@ From [The theory of graceful extensibility: basic rules that govern adaptive sys
 9. Perspective contrast overcomes bounds
 10. Mis-calibration is the norm
 
+For more details, see [summary of graceful extensibility theorems](graceful-extensibility.md).
+
+### SCAD (Systemic Contributors Analysis and Diagram)
+
+(tbd)
+
 ### Concepts
 
 Many of these are mentioned in Woods's [short course](http://csel.org.ohio-state.edu/ResilienceEngineering.html).
@@ -987,8 +1214,10 @@ Many of these are mentioned in Woods's [short course](http://csel.org.ohio-state
 * software systems as "team players"
 * multi-scale
 * brittleness
-* decompensation
-* working at cross-purposes
+* how adaptive systems fail (see: [How do systems manage their adaptive capacity to successfully handle disruptions? A resilience engineering perspective])
+    - decompensation
+    - working at cross-purposes
+    - getting stuck in outdated behaviors
 * proactive learning vs getting stuck
 * oversimplification
 * fixation
@@ -1029,6 +1258,7 @@ Many of these are mentioned in Woods's [short course](http://csel.org.ohio-state
 * sacrifice judgment
 * task tailoring
 * substitution myth
+* observability
 * directability
 * directed attention
 * inter-predictability
@@ -1037,13 +1267,17 @@ Many of these are mentioned in Woods's [short course](http://csel.org.ohio-state
 * context gap
 * Norbert's contrast
 * anomaly response
+* automation surprises
+* disturbance management
 
 ### Selected publications
 
 * [Resilience Engineering: Concepts and Precepts](https://www.amazon.com/gp/product/B009KNDF64/ref=x_gr_w_glide_bb?ie=UTF8&tag=x_gr_w_glide_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B009KNDF64&SubscriptionId=1MGPYB6YW3HWK55XCGG2)
+* [Prologue: Resilience Engineering Concepts](http://erikhollnagel.com/onewebmedia/Prologue.pdf)
+* [Epilogue: Resilience Engineering Precepts](https://www.researchgate.net/publication/265074845_Epilogue_Resilience_Engineering_Precepts)
 * [Resilience is a verb](https://www.researchgate.net/publication/329035477_Resilience_is_a_Verb)
-* [Four concepts for resilience and the implications for the future of resilience engineering](https://www.researchgate.net/publication/276139783_Four_concepts_for_resilience_and_the_implications_for_the_future_of_resilience_engineering)
-* [How adaptive systems fail](https://www.researchgate.net/publication/284173754_How_Adaptive_Systems_Fail)
+* [Four concepts for resilience and the implications for the future of resilience engineering](https://www.researchgate.net/publication/276139783_Four_concepts_for_resilience_and_the_implications_for_the_future_of_resilience_engineering) ([TWRR](https://resilienceroundup.com/issues/65))
+* [Basic patterns in how adaptive systems fail](https://www.researchgate.net/publication/284324002_Basic_patterns_in_how_adaptive_systems_fail) ([TWRR](https://resilienceroundup.com/issues/34/))
 * [Resilience and the ability to anticipate](https://www.researchgate.net/publication/285487326_Resilience_and_the_ability_to_anticipate)
 * [Distancing through differencing: An obstacle to organizational learning following accidents](https://www.researchgate.net/publication/292504703_Distancing_through_differencing_An_obstacle_to_organizational_learning_following_accidents)
 * [Essential characteristics of resilience](https://www.researchgate.net/publication/284328979_Essential_characteristics_of_resilience)
@@ -1054,8 +1288,8 @@ Many of these are mentioned in Woods's [short course](http://csel.org.ohio-state
 * [Patterns in Cooperative Cognition](https://www.researchgate.net/publication/262449980_Patterns_in_Cooperative_Cognition)
 * [Origins of cognitive systems engineering](https://www.researchgate.net/publication/298793082_Origins_of_Cognitive_Systems_Engineering)
 * [Incidents - markers of resilience or brittleness?](https://www.researchgate.net/publication/292504952_Incidents_-_markers_of_resilience_or_brittleness)
-* [The alarm problem and directed attention in dynamic fault management](https://www.tandfonline.com/doi/abs/10.1080/00140139508925274)
-* [Can We Trust Best Practices? Six Cognitive Challenges of Evidence-Based Approaches](https://journals.sagepub.com/doi/abs/10.1177/1555343416637520?journalCode=edma)
+* [The alarm problem and directed attention in dynamic fault management](https://www.researchgate.net/publication/40961767_The_Alarm_problem_and_directed_attention_in_dynamic_fault_management)
+* [Can We Trust Best Practices? Six Cognitive Challenges of Evidence-Based Approaches]
 * [Operating at the Sharp End: The Complexity of Human Error](https://www.researchgate.net/publication/313407259_Operating_at_the_Sharp_End_The_Complexity_of_Human_Error)
 * [The theory of graceful extensibility: basic rules that govern adaptive systems]
 * [Simon's Slice: Five Fundamental Tradeoffs that Bound the Performance of Human Work Systems](https://www.researchgate.net/publication/260404967_Simon's_Slice_Five_Fundamental_Tradeoffs_that_Bound_the_Performance_of_Human_Work_Systems)
@@ -1067,7 +1301,7 @@ Many of these are mentioned in Woods's [short course](http://csel.org.ohio-state
 * [Problem detection]
 * [Cognitive consequences of clumsy automation on high workload, high consequence human performance]
 * [Implications of automation surprises in aviation for the future of total intravenous anesthesia (TIVA)]
-* [Ten challenges for making automation a team player]
+* [Ten challenges for making automation a team player] ([TWRR](https://resilienceroundup.com/issues/66))
 * [The Messy Details: Insights From the Study of Technical Work in Healthcare]
 * [Nosocomial automation: technology-induced complexity and human performance]
 * [Human-centered software agents: Lessons from clumsy automation](http://www.ifp.illinois.edu/nsfhcs/abstracts/woods.txt)
@@ -1093,20 +1327,46 @@ Many of these are mentioned in Woods's [short course](http://csel.org.ohio-state
 * [The Strategic Agility Gap: How organizations are slow and stale to adapt in turbulent worlds](https://www.researchgate.net/publication/330196218_The_Strategic_Agility_Gap_How_organizations_are_slow_and_stale_to_adapt_in_turbulent_worlds)
 * [Resiliency Trade Space Study: The Interaction of Degraded C2 Link and Detect and Avoid Autonomy on Unmanned Aircraft](https://www.researchgate.net/publication/330222613_Resiliency_Trade_Space_Study_The_Interaction_of_Degraded_C2_Link_and_Detect_and_Avoid_Autonomy_on_Unmanned_Aircraft)
 * [Cognitive Technologies: The Design of Joint Human-Machine Cognitive Systems](https://www.researchgate.net/publication/220604613_Cognitive_Technologies_The_Design_of_Joint_Human-Machine_Cognitive_Systems)
-* [Cognitive Systems Engineering: New wine in new bottles] (see also [Thai Wood's notes](https://www.getrevue.co/profile/resilience/issues/resilience-roundup-cognitive-systems-engineering-new-wine-in-new-bottles-issue-32-175912) in his [Resilience Roundup] newsletter)
+* [Cognitive Systems Engineering: New wine in new bottles] ([TWRR](https://resilienceroundup.com/issues/32/))
+* [The Seven Deadly Myths of "Autonomous Systems"]
+* [Resilience and the ability to anticipate](https://www.researchgate.net/publication/285487326_Resilience_and_the_ability_to_anticipate)
+* [Patterns in Cooperative Cognition]
+* [Collaborative Cross-Checking to Enhance Resilience]
+* [Resilience Engineering: New directions for measuring and maintaining safety in complex systems]
+* [A rose by any other name...would probably be given an acronym]
+* [How do systems manage their adaptive capacity to successfully handle disruptions? A resilience engineering perspective](https://www.researchgate.net/publication/286581322_How_do_systems_manage_their_adaptive_capacity_to_successfully_handle_disruptions_A_resilience_engineering_perspective)
+* [How Unexpected Events Produce An Escalation Of Cognitive And Coordinative Demands]
+* [How to Make Automated Systems Team Players](https://www.researchgate.net/profile/David_Woods11/publication/2483863_How_to_Make_Automated_Systems_Team_Players/links/5a4f829eaca272940bf8202c/How-to-Make-Automated-Systems-Team-Players.pdf)
+* [Toward a Theory of Complex and Cognitive Systems]
+* [Multiple systemic contributors versus root cause: learning from a NASA Near Miss](https://www.researchgate.net/publication/308194080_Multiple_Systemic_Contributors_versus_Root_Cause_Learning_from_a_NASA_Near_Miss)
+* [Bootstrapping multiple converging cognitive task analysis techniques for system design]
+* [New Arctic Air Crash Aftermath Role-Play Simulation Orchestrating a Fundamental Surprise]
+* [How Unexpected Events Produce An Escalation Of Cognitive And Coordinative Demands]
+* [Mapping Cognitive Demands in Complex Problem-Solving Worlds] (mentions disturbance management)
+* [Fixation Errors: Failures to Revise Situation Assessment in Dynamic and Risky Systems](https://www.researchgate.net/publication/290071190_Fixation_Errors_Failures_to_Revise_Situation_Assessment_in_Dynamic_and_Risky_Systems)
+* [Nine Steps to Move Forward From Error]
+* [Handoff strategies in settings with high consequences for failure: lessons for health care operations] ([TWRR](https://resilienceroundup.com/issues/56))
+* [The High Reliability Organization Perspective] ([TWRR](https://resilienceroundup.com/issues/09/))
+* [Automation surprises]
+* [Safety II professionals: How resilience engineering can transform safety practice] ([TWRR](https://resilienceroundup.com/issues/64/))
 
-[The theory of graceful extensibility: basic rules that govern adaptive systems]: https://link.springer.com/article/10.1007%2Fs10669-018-9708-3
+* [Gaps in the continuity of care and progress on patient safety]
+
+[The theory of graceful extensibility: basic rules that govern adaptive systems]: https://www.researchgate.net/publication/327427067_The_Theory_of_Graceful_Extensibility_Basic_rules_that_govern_adaptive_systems
+[How do systems manage their adaptive capacity to successfully handle disruptions? A resilience engineering perspective]: https://www.researchgate.net/publication/286581322_How_do_systems_manage_their_adaptive_capacity_to_successfully_handle_disruptions_A_resilience_engineering_perspective
 
 ### Selected talks
 
+* [Creating safety by engineering resilience](https://vimeo.com/104759707)
 * [The Mystery of Sustained Adaptability](https://www.youtube.com/watch?v=7STcaWjJoww)
+* [Resilience is a verb](https://www.youtube.com/watch?v=V2qj5gMsjrU)
+* [Complexity workshop keynote](https://www.youtube.com/watch?v=KJJ2NCjc2Wg)
 
 ## John Wreathall
 
 Wreathall is an expert in human performance in safety. He works at the
 [WreathWood Group](http://www.wreathall.com/), a risk and safety studies
 consultancy.
-
 Wreathall tweets as [@wreathall](https://twitter.com/wreathall).
 
 ### Selected publications

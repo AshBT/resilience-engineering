@@ -1,7 +1,10 @@
 # Resilience engineering: Where do I start?
 
-This an introductory guide to readings in *resilience engineering*, aimed at software engineers. Key
-papers are organized into themes:
+This an introductory guide to readings in *resilience engineering*, aimed at software engineers.
+
+For an FAQ style introduction to resilience engineering, see [resilience-for-software](https://github.com/res-eng/resilience-for-software).
+
+Key papers are organized into themes:
 
 
 * [What is resilience?](#what-is-resilience)
@@ -66,10 +69,6 @@ Note that traditional approaches to safety often focus on minimizing variance
 associated with humans doing work, using techniques such as documented
 procedures and enforcement mechanisms for deviating from them. 
 
-For those of us who work on cloud web services, we don't have this legacy of
-enforced procedures to contend with.
-
-
 ### New look / new view
 
 The "new look" or "new view" refers to a change in perspective on how accidents
@@ -85,7 +84,7 @@ Johan Bergström of Lund University has three excellent short (<10 minute) video
 
 Two great introductory papers (alas, both paywalled) are:
 
-* [Reconstructing human contributions to accidents: the new view on error and performance](https://www.sciencedirect.com/science/article/pii/S0022437502000324) 
+* [Reconstructing human contributions to accidents: the new view on error and performance](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.411.4985&rep=rep1&type=pdf) 
 by Dekker 
 * [The error of counting errors](https://doi.org/10.1016/j.annemergmed.2008.03.015) by Robert Wears
 
@@ -158,9 +157,13 @@ this community is very concerned about the potential *brittleness* associated wi
 use of automation.
 
 
-* [Ironies of automation](https://doi.org/10.1016/0005-1098(83)90046-8) by Lisanne
+* [Ironies of automation](https://www.ise.ncsu.edu/wp-content/uploads/2017/02/Bainbridge_1983_Automatica.pdf) by Lisanne
 Bainbridge is a classic paper on the problems that automation can introduce.
 The paper was originally written in 1983, and continues to be widely cited. 
+
+* [How to make automated systems team players](https://researchgate.net/publication/2483863)
+by Christoffersen and Woods discusses how previous automated systems have been problematic and proposes strategies
+for improving automating.
 
 * [Ten challenges for making automation a team player](https://ieeexplore.ieee.org/abstract/document/1363742)
 by Klein et al. is a more recent paper that outlines the requirements for automation to be genuinely effective in
